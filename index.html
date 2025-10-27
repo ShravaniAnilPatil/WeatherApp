@@ -1,24 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>Weather App</h1>
-        <div class="search">
-            <input type="text" id="city" placeholder="Enter city name">
-            <button onclick="getWeather()">Get Weather</button>
-        </div>
-        <div class="weather-info" id="weather-info">
-            <!-- Weather information will be displayed here -->
-        </div>
+  <div class="overlay"></div>
+  <div class="container">
+    <h1>Weather App</h1>
+    <div class="search">
+      <input type="text" id="city" placeholder="Enter city name">
+      <button onclick="getWeather()">Search</button>
     </div>
-    <script src="script.js"></script>
+
+    <div class="weather-info" id="weather-info">
+      <!-- Yesterday -->
+      <div class="weather-card" id="yesterday-card">
+        <h2>Yesterday</h2>
+        <div class="weather-icon" id="yesterday-icon"></div>
+        <p id="yesterday-temp"></p>
+        <p id="yesterday-feels"></p>
+        <p id="yesterday-minmax"></p>
+        <p id="yesterday-desc"></p>
+        <p id="yesterday-humidity"></p>
+        <p id="yesterday-wind"></p>
+        <p id="yesterday-pressure"></p>
+        <p id="yesterday-visibility"></p>
+        <p id="yesterday-clouds"></p>
+        <p id="yesterday-rain"></p>
+        <p id="yesterday-snow"></p>
+      </div>
+
+      <!-- Today -->
+      <div class="weather-card" id="today-card">
+        <h2>Today's Weather</h2>
+        <div class="weather-icon" id="today-icon"></div>
+        <p id="today-temp"></p>
+        <p id="today-feels"></p>
+        <p id="today-minmax"></p>
+        <p id="today-desc"></p>
+        <p id="today-humidity"></p>
+        <p id="today-wind"></p>
+        <p id="today-pressure"></p>
+        <p id="today-visibility"></p>
+        <p id="today-clouds"></p>
+        <p id="today-rain"></p>
+        <p id="today-snow"></p>
+      </div>
+
+      <!-- Tomorrow -->
+      <div class="weather-card" id="tomorrow-card">
+        <h2>Tomorrow</h2>
+        <div class="weather-icon" id="tomorrow-icon"></div>
+        <p id="tomorrow-temp"></p>
+        <p id="tomorrow-feels"></p>
+        <p id="tomorrow-minmax"></p>
+        <p id="tomorrow-desc"></p>
+        <p id="tomorrow-humidity"></p>
+        <p id="tomorrow-wind"></p>
+        <p id="tomorrow-pressure"></p>
+        <p id="tomorrow-visibility"></p>
+        <p id="tomorrow-clouds"></p>
+        <p id="tomorrow-rain"></p>
+        <p id="tomorrow-snow"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
